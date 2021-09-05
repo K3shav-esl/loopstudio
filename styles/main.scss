@@ -1,0 +1,322 @@
+@import "styles/variable";
+
+// the main code starts here
+//importing the fonts 
+//alata
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+//Josefin Sans
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+html{
+    font-size: 62.5%;//defining 1rem = 10px
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body{
+     font-family: $alata, $jofin, sans-serif;
+     width: 100%;
+ }
+
+
+//code for section-1
+
+.section-1{
+    height: 65rem;//for testin only
+    background-image: linear-gradient( to right, rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url("../images/desktop/image-hero.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.header{
+    padding: 6rem 16rem;
+
+    display: flex;
+    align-items: center;
+
+    &__company-text{
+        margin-right: auto;
+        font-weight: 400;
+        color: $white;
+        text-decoration: none;
+        font-size: 4rem;
+    }
+
+    &__menu__menu{
+        &_list{
+            display: flex;
+            color: $white;
+            align-items: center;
+
+            &__item{
+                font-size: 1.55rem;
+                list-style: none;
+                cursor: pointer;
+                position: relative;
+                padding: 0.5rem 0;
+                text-align: center;
+
+                &::after{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0%;
+                    content: "";
+                    z-index: 1;
+                    width:0%;
+                    height: 2px;
+                    border-radius: 2px;
+                    background-color: white;
+                    transition: width 0.2s ease-in-out;
+
+                    
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+
+                &:not(:last-child){
+                    margin-right: 3.5rem;
+                }
+            }
+        }
+    }
+}
+
+.tagline{
+    border: 0.3rem solid $white;
+    margin: 3.5rem 16rem;
+    border-radius: 2px;
+    width: max-content;
+    font-size: 8rem;
+    padding: 3rem 1rem;
+    padding-right: 3rem;
+    &__text{
+        font-family: $jofin;
+       display: inline-block;
+       text-transform: uppercase;
+       font-weight: lighter;
+       color: $white;
+       padding: 1rem 4rem;
+    }
+}
+
+
+//code for section-2
+
+.section-2{
+    height: 65rem ;
+    position: relative;
+    margin-bottom: 10rem;
+}
+.image-div{
+    position: absolute;
+    top: 16rem;
+    left: 16rem;
+}
+.info{
+    height: fit-content;
+    position: absolute;
+    right: 14rem;
+    bottom: -1rem;
+    padding-top: 10rem;
+    padding-left: 10rem;
+    padding-right: 1.5rem;
+    background-color: $white;
+
+    &__heading{
+        font-family: $jofin;
+        font-size: 5rem;
+        text-transform: uppercase;
+    }
+
+    &__para{
+        margin: 2rem 0;
+        margin-bottom: 0;
+        font-size: 1.8rem;
+        color: $dark-grey;
+    }
+}
+
+//code for section-3
+
+.section-3{
+    
+
+    &__header{
+        padding: 10rem 16rem;
+        display: flex;
+        align-items: center;
+        &>*{
+            display: inline-block
+        }
+        &__heading{
+            margin-right: auto;
+            font-size: 5rem;
+            font-family: $jofin;
+            text-transform: uppercase;
+        }
+        &__button{
+            text-decoration: none;
+            color: $black;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            letter-spacing: 0.6rem;
+            padding: 0.5rem 3rem;
+            border-radius: 2px;
+            border: 2px solid $very-dark-grey;
+            transition: all 0.2s ease-out;
+
+            &:hover{
+                color: $white;
+                background-color: black;
+                border: 2px solid $black;
+            }
+        }
+    }
+}
+
+.creation-grid{
+    padding: 0 16rem;
+    grid-gap: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 45rem);
+    justify-content:center;
+    color: $white;
+
+    &>*{
+        background-size: cover;
+        position: relative;
+        &::after{
+            transition: all 0.3s ease-out;
+            content: "";
+            z-index: 1;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+        }
+        &:hover{
+            color: black;
+        }
+        &:hover::after{
+            background-color: rgba(white, 0.6);
+        }
+        
+       
+    }
+
+    &__item_1{
+        background-image:linear-gradient(to bottom, rgba(black, 0) , rgba(black, 0.5) 90%), url(../images/desktop/image-deep-earth.jpg);
+    }
+    &__item_2{
+        background-image:linear-gradient(to bottom, rgba(black, 0) , rgba(black, 0.5) 90%) , url(../images/desktop/image-night-arcade.jpg);
+    }
+    &__item_3{
+        background-image:linear-gradient(to bottom, rgba(black, 0) , rgba(black, 0.5) 90%), url(../images/desktop/image-soccer-team.jpg);
+    }
+    &__item_4{
+        background-image:linear-gradient(to bottom, rgba(black, 0) , rgba(black, 0.5) 90%), url(../images/desktop/image-grid.jpg);
+    }
+    &__item_5{
+        background-image:linear-gradient(to bottom, rgba(black, 0) , rgba(black, 0.5) 90%), url(../images/desktop/image-from-above.jpg);
+    }
+    &__item_6{
+        background-image:linear-gradient(to bottom, rgba(black, 0) , rgba(black, 0.5) 90%), url(../images/desktop/image-pocket-borealis.jpg);
+    }
+    &__item_7{
+        background-image:linear-gradient(to bottom, rgba(black, 0) , rgba(black, 0.5) 90%), url(../images/desktop/image-curiosity.jpg);
+    }
+    &__item_8{
+        background-image:linear-gradient(to bottom, rgba(black, 0) , rgba(black, 0.5) 90%), url(../images/desktop/image-fisheye.jpg);
+    }
+
+    &__text{
+        position: absolute;
+        left: 0;
+        z-index: 3;
+        bottom: 0;
+        padding-left: 4rem;
+        padding-bottom: 4rem;
+        font-size: 3rem;
+        font-family: $jofin;
+        text-transform: uppercase;
+
+    }
+}
+
+
+.footer{
+    padding: 4rem 16rem;
+    margin-top: 20rem;
+    height: fit-content;
+    background-color: black;
+    color: $white;
+
+
+    &__company-contacts{
+        display: flex;
+        align-items: center;
+
+        &__name{
+            font-size: 3rem;
+            margin-right: auto;
+        }
+
+        &__contacts{
+            &_img{
+                display: inline-block;
+                transform: scale(1.2);
+                &:not(:last-child){
+                    margin-right: 1.5rem;
+                }
+            }
+        }
+
+    }
+
+    &__menu-copyright{
+        margin-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.5rem;
+
+        &__menu{
+            display: flex;
+            align-items: center;
+            &__item{
+                position: relative;
+                list-style: none;
+                text-decoration: none;
+                padding: 0.5rem 0;
+
+                &::after{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0%;
+                    content: "";
+                    z-index: 1;
+                    width:0%;
+                    height: 2px;
+                    border-radius: 2px;
+                    background-color: white;
+                    transition: width 0.2s ease-in-out;
+
+                    
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+                &:not(:first-child){
+                    margin-left: 3rem;
+                }
+            }
+        }
+    }
+}

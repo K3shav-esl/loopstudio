@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+html {
+  font-size: 62.5%; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: Alata, Josefin Sans, sans-serif;
+  width: 100%; }
+
+.section-1 {
+  height: 65rem;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/desktop/image-hero.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.header {
+  padding: 6rem 16rem;
+  display: flex;
+  align-items: center; }
+  .header__company-text {
+    margin-right: auto;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    font-size: 4rem; }
+  .header__menu__menu_list {
+    display: flex;
+    color: white;
+    align-items: center; }
+    .header__menu__menu_list__item {
+      font-size: 1.55rem;
+      list-style: none;
+      cursor: pointer;
+      position: relative;
+      padding: 0.5rem 0;
+      text-align: center; }
+      .header__menu__menu_list__item::after {
+        position: absolute;
+        bottom: 0;
+        left: 0%;
+        content: "";
+        z-index: 1;
+        width: 0%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: white;
+        transition: width 0.2s ease-in-out; }
+      .header__menu__menu_list__item:hover::after {
+        width: 100%; }
+      .header__menu__menu_list__item:not(:last-child) {
+        margin-right: 3.5rem; }
+
+.tagline {
+  border: 0.3rem solid white;
+  margin: 3.5rem 16rem;
+  border-radius: 2px;
+  width: max-content;
+  font-size: 8rem;
+  padding: 3rem 1rem;
+  padding-right: 3rem; }
+  .tagline__text {
+    font-family: Josefin Sans;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: white;
+    padding: 1rem 4rem; }
+
+.section-2 {
+  height: 65rem;
+  position: relative;
+  margin-bottom: 10rem; }
+
+.image-div {
+  position: absolute;
+  top: 16rem;
+  left: 16rem; }
+
+.info {
+  height: fit-content;
+  position: absolute;
+  right: 14rem;
+  bottom: -1rem;
+  padding-top: 10rem;
+  padding-left: 10rem;
+  padding-right: 1.5rem;
+  background-color: white; }
+  .info__heading {
+    font-family: Josefin Sans;
+    font-size: 5rem;
+    text-transform: uppercase; }
+  .info__para {
+    margin: 2rem 0;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    color: #8c8c8c; }
+
+.section-3__header {
+  padding: 10rem 16rem;
+  display: flex;
+  align-items: center; }
+  .section-3__header > * {
+    display: inline-block; }
+  .section-3__header__heading {
+    margin-right: auto;
+    font-size: 5rem;
+    font-family: Josefin Sans;
+    text-transform: uppercase; }
+  .section-3__header__button {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 0.6rem;
+    padding: 0.5rem 3rem;
+    border-radius: 2px;
+    border: 2px solid dimgray;
+    transition: all 0.2s ease-out; }
+    .section-3__header__button:hover {
+      color: white;
+      background-color: black;
+      border: 2px solid black; }
+
+.creation-grid {
+  padding: 0 16rem;
+  grid-gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 45rem);
+  justify-content: center;
+  color: white; }
+  .creation-grid > * {
+    background-size: cover;
+    position: relative; }
+    .creation-grid > *::after {
+      transition: all 0.3s ease-out;
+      content: "";
+      z-index: 1;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: transparent; }
+    .creation-grid > *:hover {
+      color: black; }
+    .creation-grid > *:hover::after {
+      background-color: rgba(255, 255, 255, 0.6); }
+  .creation-grid__item_1 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 90%), url(../images/desktop/image-deep-earth.jpg); }
+  .creation-grid__item_2 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 90%), url(../images/desktop/image-night-arcade.jpg); }
+  .creation-grid__item_3 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 90%), url(../images/desktop/image-soccer-team.jpg); }
+  .creation-grid__item_4 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 90%), url(../images/desktop/image-grid.jpg); }
+  .creation-grid__item_5 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 90%), url(../images/desktop/image-from-above.jpg); }
+  .creation-grid__item_6 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 90%), url(../images/desktop/image-pocket-borealis.jpg); }
+  .creation-grid__item_7 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 90%), url(../images/desktop/image-curiosity.jpg); }
+  .creation-grid__item_8 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 90%), url(../images/desktop/image-fisheye.jpg); }
+  .creation-grid__text {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    bottom: 0;
+    padding-left: 4rem;
+    padding-bottom: 4rem;
+    font-size: 3rem;
+    font-family: Josefin Sans;
+    text-transform: uppercase; }
+
+.footer {
+  padding: 4rem 16rem;
+  margin-top: 20rem;
+  height: fit-content;
+  background-color: black;
+  color: white; }
+  .footer__company-contacts {
+    display: flex;
+    align-items: center; }
+    .footer__company-contacts__name {
+      font-size: 3rem;
+      margin-right: auto; }
+    .footer__company-contacts__contacts_img {
+      display: inline-block;
+      transform: scale(1.2); }
+      .footer__company-contacts__contacts_img:not(:last-child) {
+        margin-right: 1.5rem; }
+  .footer__menu-copyright {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem; }
+    .footer__menu-copyright__menu {
+      display: flex;
+      align-items: center; }
+      .footer__menu-copyright__menu__item {
+        position: relative;
+        list-style: none;
+        text-decoration: none;
+        padding: 0.5rem 0; }
+        .footer__menu-copyright__menu__item::after {
+          position: absolute;
+          bottom: 0;
+          left: 0%;
+          content: "";
+          z-index: 1;
+          width: 0%;
+          height: 2px;
+          border-radius: 2px;
+          background-color: white;
+          transition: width 0.2s ease-in-out; }
+        .footer__menu-copyright__menu__item:hover::after {
+          width: 100%; }
+        .footer__menu-copyright__menu__item:not(:first-child) {
+          margin-left: 3rem; }
